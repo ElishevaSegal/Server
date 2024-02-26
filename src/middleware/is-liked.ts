@@ -15,7 +15,6 @@ const isLiked: RequestHandler = async (req, res, next) => {
     if (!itemExist) throw new appError("Item does not exist", 401);
     const { likes } = await Item.findById(itemId);
 
-    // Check if userId is in the likes array
     if (likes.includes(userId)) {
       const item = await Item.findOneAndUpdate(
         { _id: itemId },
@@ -24,7 +23,6 @@ const isLiked: RequestHandler = async (req, res, next) => {
       );
       res.json({ item });
     } else {
-      // Continue to the next middleware
       next();
     }
   } catch (e) {

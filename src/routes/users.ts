@@ -32,9 +32,7 @@ router.get("/", isAdmin, async (req, res, next) => {
 //PUT edit user
 router.put("/:id", isUser, validateUserEdit, async (req, res, next) => {
   try {
-  
-  
-    const  savedUser  = (await User.findByIdAndUpdate(
+    const savedUser = (await User.findByIdAndUpdate(
       { _id: req.params.id },
       req.body,
       { new: true }
@@ -76,11 +74,8 @@ router.post("/", validateUserRegistration, async (req, res, next) => {
 //POST login registed user
 router.post("/login", validateUserLogin, async (req, res, next) => {
   try {
-    //check the request:
     const { email, password } = req.body as ILogin;
-    //call the service:
     const jwt = await validateUser(email, password);
-    //response
     res.json(jwt);
   } catch (e) {
     next(e);

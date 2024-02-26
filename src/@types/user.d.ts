@@ -35,10 +35,6 @@ type IEditUser = {
   address: IAddress;
   image?: IImage;
   phone: string;
-  // isBusiness: boolean;
-  // isAdmin?: boolean;
-  // createdAt?: Date;
- // _id?: string;
 };
 
 type ILogin = {

@@ -1,4 +1,4 @@
-import { RequestHandler} from "express";
+import { RequestHandler } from "express";
 import { auth } from "../service/auth-service";
 import { User } from "../database/model/user";
 import { extractToken } from "../service/auth-service";
@@ -14,7 +14,6 @@ const isAdminOrUser: RequestHandler = async (req, res, next) => {
     if (!userExistById) throw new appError("User does not exist", 401);
     const token = extractToken(req);
     const { email } = auth.verifyJWT(token);
-    //get user from database:
     const user = await User.findOne({ email });
     if (!user) throw new appError("User didnt found from token", 401);
 

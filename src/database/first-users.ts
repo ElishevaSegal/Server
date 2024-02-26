@@ -1,9 +1,9 @@
 export const users = [
   {
     name: {
-      first: "Eden",
+      first: "Elisheva",
       middle: "",
-      last: "Drori",
+      last: "Segal",
     },
     address: {
       city: "Anytown",
@@ -18,7 +18,7 @@ export const users = [
       url: "https://picsum.photos/200/300",
     },
     phone: "050-8123091",
-    email: "Eden@Gmail.com",
+    email: "Esegal390@Gmail.com",
     password: "$2b$12$4DvTND2MogN1unDiEjgxF.XbeUh8hevRzf.IojAHv4H6Gt6cMaXem",
     isAdmin: false,
     isBusiness: false,
@@ -49,7 +49,7 @@ export const users = [
   },
   {
     name: {
-      first: "Eden",
+      first: "Elisheva",
       middle: "",
       last: "Business",
     },
@@ -66,7 +66,7 @@ export const users = [
       url: "https://picsum.photos/200/300",
     },
     phone: "050-8123091",
-    email: "EdenBusiness@gmail.com",
+    email: "ElishevaBusiness@gmail.com",
     password: "$2b$12$JLz5of1Ob2HMCBxb5BFONeqrgtumAqkeGuVe8A5aObj8ThbicO/Ne",
     isAdmin: false,
     isBusiness: true,

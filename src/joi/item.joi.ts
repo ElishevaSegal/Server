@@ -15,12 +15,7 @@ const schema = Joi.object<IItem>({
     city: Joi.string().min(2).max(50).required(),
     street: Joi.string().min(2).max(100).required(),
     houseNumber: Joi.number().min(0).max(999999).required(),
-    // zip: Joi.string().min(2).max(30).allow(""),
   }),
-  // price: Joi.object<IPrice>({
-  //   value: Joi.number().min(1).max(999999).required(),
-  //   currency: Joi.string().min(1).max(4).required(),
-  // }),
   image: Joi.object<IImage>({
     url: Joi.string().max(5000).allow(""),
     alt: Joi.string().max(200).allow(""),

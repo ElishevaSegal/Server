@@ -20,9 +20,6 @@ const schema = Joi.object<IEditUser>({
     alt: Joi.string().min(2).max(200).allow(""),
   }),
   phone: Joi.string().min(9).max(15).required().pattern(phoneRegex),
-//   isAdmin: Joi.boolean().allow(),
-//   isBusiness: Joi.boolean().required(),
-//   createdAt: Joi.date().allow().default(new Date()),
 });
 
 export { schema as joiEditUserSchema };

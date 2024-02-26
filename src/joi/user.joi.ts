@@ -9,12 +9,10 @@ const schema = Joi.object<IUser>({
     last: Joi.string().min(2).max(20).required(),
   }),
   address: Joi.object<IAddress>({
-    
     country: Joi.string().min(2).max(50).required(),
     city: Joi.string().min(2).max(50).required(),
     street: Joi.string().min(2).max(100).required(),
     houseNumber: Joi.number().min(0).max(999999).required(),
-    // zip: Joi.string().min(2).max(30).allow(""),
   }),
   image: Joi.object<IImage>({
     url: Joi.string().min(12).max(5000).allow(""),

@@ -1,11 +1,5 @@
 //users requests:
 
-// eden token:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkRST1JJQGdtYWlsLmNvbSIsImlhdCI6MTcwMzY3MjExN30.P1p8vuIe0cK6LgBe3JJBNLcAsEAxrQcUSWKoQlSgyBg
-
-
-//admin token:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTcwMzY3MjcyNn0.KHp3nLfyuly-aWZBNjCS_FfrL32YeShZ8i9SmlRU89k
-
-
 ### GET All users:
 GET http://localhost:8081/api/v1/users
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTcwMzE1NDUwMH0.XaRGi5cil98w2anyMwjTI90u4Wq9Dk2UIDBdLBC4qCY
@@ -17,8 +11,8 @@ Content-Type: application/json
 
 {
   "name": {
-    "first": "EDEN",
-    "last": "DRORI"
+    "first": "Eli",
+    "last": "Segal"
   },
   "address": {
     "street": "123 Main St",
@@ -28,7 +22,7 @@ Content-Type: application/json
   },
 
   "phone": "050-8123091",
-  "email": "DRORIEEE1@gmail.com",
+  "email": "EliSegal@gmail.com",
   "isBusiness": true,
   "password": "123456aA!"
 }
@@ -61,8 +55,8 @@ Content-Type: application/json
 
 {
   "name": {
-    "first": "EDEN!",
-    "last": "DRORI!"
+    "first": "Elisheva!",
+    "last": "Segal!"
   },
   "address": {
     "street": "123 Main St", 
@@ -76,7 +70,7 @@ Content-Type: application/json
     "url": "https://picsum.photos/200/300"
   },
   "phone": "050-8123091",
-  "email": "DRORIEEE@gmail.com",
+  "email": "Segalll@gmail.com",
   "isBusiness": true,
   "password": "123456aA!" 
 }
@@ -89,6 +83,10 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkRST1JJQ
 ### PATCH user change isBizz status:
 PATCH http://localhost:8081/api/v1/users/658bf8ebf2ed6a63ee3e819a
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTcwMzY3MjcyNn0.KHp3nLfyuly-aWZBNjCS_FfrL32YeShZ8i9SmlRU89k
+
+
+
+
 
 
 //items requests:

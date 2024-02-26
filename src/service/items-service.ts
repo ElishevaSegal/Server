@@ -15,19 +15,18 @@ const newItem = async (data: IItemInput, userId: string) => {
     }
   }
   item.image.url =
-    item.image?.url || "https://cdn-icons-png.flaticon.com/256/147/147142.png";
-  item.image.alt = item.image?.alt || "default alt";
+    item.image?.url ||
+    "https://i.pinimg.com/564x/cb/c1/c1/cbc1c1aeef9092676adcd3c13a167860.jpg";
+  item.image.alt = item.image?.alt || "item";
   return item.save();
 };
 const markItemAsSold = async (itemId: string) => {
   try {
-    // Assuming you have your Mongoose model as `Item`
     const item = await Item.findByIdAndUpdate(
       itemId,
       {
         $set: {
-          // status: "sold",
-          saleDate: new Date(), // Set saleDate to the current date and time
+          saleDate: new Date(),
         },
       },
       { new: true }

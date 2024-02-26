@@ -18,17 +18,15 @@ const isUser: RequestHandler = async (req, res, next) => {
     const token = extractToken(req);
     const { email } = auth.verifyJWT(token);
 
-    //get user from database
     const user = (await User.findOne({ email }).lean()) as IUser;
 
     req.user = user;
 
     if (!user) throw new appError("User didnt found from token", 401);
 
-    
     if (id == user?._id) return next();
 
-    throw new appError( "The id must belong to the user" ,401);
+    throw new appError("The id must belong to the user", 401);
   } catch (e) {
     next(e);
   }

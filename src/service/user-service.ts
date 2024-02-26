@@ -7,7 +7,8 @@ const createUser = async (userData: IUser) => {
   const user = new User(userData);
   user.password = await auth.hashPassword(user.password);
   user.image.url =
-    user.image?.url || "https://cdn-icons-png.flaticon.com/256/147/147142.png";
+    user.image?.url ||
+    "https://t4.ftcdn.net/jpg/05/09/59/75/360_F_509597532_RKUuYsERhODmkxkZd82pSHnFtDAtgbzJ.jpg";
   user.image.alt = user.image?.alt || "default alt";
   return user.save();
 };

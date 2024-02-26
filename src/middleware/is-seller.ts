@@ -18,7 +18,6 @@ const isSeller: RequestHandler = async (req, res, next) => {
     const token = extractToken(req);
     const { email } = auth.verifyJWT(token);
 
-    //get user from database
     const user = (await User.findOne({ email }).lean()) as IUser;
     req.user = user;
 
@@ -27,9 +26,7 @@ const isSeller: RequestHandler = async (req, res, next) => {
     if (!item) throw new appError("Item does not exist", 401);
 
     if (item.userId == user._id) return next();
-    throw new appError(
-        "This action can only be performed by the seller."
-    ,401);
+    throw new appError("This action can only be performed by the seller.", 401);
   } catch (e) {
     next(e);
   }

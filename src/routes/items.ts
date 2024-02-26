@@ -117,20 +117,5 @@ router.patch("/:id", validateToken, isLiked, async (req, res, next) => {
     next(e);
   }
 });
-// router.patch("/status/:id", async (req, res, next) => {
-//   try {
-//     const status = !req.item.status;
-//     const saved = await Item.findOneAndUpdate(
-//       { _id: req.params.id },
-//       { $set: { status: status } },
-//       {
-//         new: true,
-//       }
-//     );
-//     res.json({ saved });
-//   } catch (e) {
-//     next(e);
-//   }
-// });
 
 export { router as itemsRouter };
